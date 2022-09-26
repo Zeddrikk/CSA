@@ -1,0 +1,101 @@
+
+CodingBat Exercise 1:
+
+public boolean more20(int n) {
+  if (n % 20 == 1 || n % 20 == 2) {
+    return true;
+  } else {
+  return false;
+  }
+}
+
+
+
+
+
+CodingBat Exercise 2:
+
+public int sortaSum(int a, int b) {
+  if (a + b >= 10 && a + b <= 19){
+    return 20;
+  } else {
+    return a + b;
+  }
+}
+
+
+
+
+CodingBat Exercise 3: 
+
+public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+  if (isAsleep) {
+    return false;
+  } else if (isMorning && isMom) {
+    return true;
+  } else if (isMorning) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+CodingBat Exercise 4:
+
+public int dateFashion(int you, int date) {
+  if (you <= 2 || date <= 2) {
+    return 0;
+  } else if (you >= 8 || date >= 8){
+    return 2;
+  } else {
+    return 1;
+  }
+}
+
+
+
+CodingBat Exercise 5:
+
+public boolean lastDigit(int a, int b, int c) {
+  int aDigit = a % 10;
+  int bDigit = b % 10;
+  int cDigit = c % 10;
+  
+  if (aDigit == bDigit) {
+    return true;
+  } else if (bDigit == cDigit) {
+    return true;
+  } else if (aDigit == cDigit) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+CodingBat Exercise 6:
+public int teenSum(int a, int b) {
+  int sum = a + b;
+  
+  if (a >= 13 && a <= 19 || b >= 13 && b <= 19) {
+    return 19;
+  } else {
+    return sum;
+  }
+}
+CodingBat Exercise 7:
+
+public int withoutDoubles(int die1, int die2, boolean noDoubles) {
+  int sum = die1 + die2;
+  
+  if (noDoubles && die1 == die2) {
+    if (die1 == 6 || die2 == 6) {
+      sum -=5;
+      return sum;
+    } else {
+      sum++;
+      return sum;
+    }
+  } else {
+    return sum;
+  }
+}
