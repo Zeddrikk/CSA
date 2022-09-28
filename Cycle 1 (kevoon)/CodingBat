@@ -1,0 +1,68 @@
+public boolean more20(int n) {
+  if (n%20<3&&n%20!=0)
+    return true;
+  return false;
+}
+
+public int sortaSum(int a, int b) {
+  int sum = a+b;
+  if (sum >= 10 && sum<=19)
+    return 20;
+  return sum;  
+}
+
+public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+  if(!isAsleep){
+    if(isMorning){
+      if(isMom)
+        return true;
+      return false;
+    }
+    return true;
+  }
+  return false;
+}
+
+public int dateFashion(int you, int date) {
+  
+  if(you<3 || date <3){
+    return 0;
+  }
+  if(you> 7 || date >7){
+    return 2;
+  }
+  
+  return 1;
+}
+
+public boolean lastDigit(int a, int b, int c) {
+  a = a%10;
+  b = b%10;
+  c = c%10;
+  if (a==b || a==c){
+    return true;
+  }
+  if(b==c){
+    return true;
+  }
+  return false;
+}
+
+public int teenSum(int a, int b) {
+  int sum = a+b;
+  if((a>12 &&a<20)||(b>12 &&b<20)){
+    return 19;
+  }
+  return sum;
+}
+
+
+public int withoutDoubles(int die1, int die2, boolean noDoubles) {
+  if(die1 == die2 && noDoubles){
+    die2 = die2%6 +1;
+  }
+  return die1+die2;
+  
+}
+
+
