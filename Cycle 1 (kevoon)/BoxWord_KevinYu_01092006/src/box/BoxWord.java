@@ -48,7 +48,6 @@ class BoxWord
 		String reverse ="";
 		for(int x = length-1; x>=0;x--) {
 			reverse +=word.charAt(x);
-			
 		}
 		boolean bruh=false;
 		for(int x = 0; x<length;x++) {
@@ -57,35 +56,20 @@ class BoxWord
 				if(x%length >0 && x%length<length-1&&y<length-1) {
 					output +=" ";
 					bruh = true;
-					
 				}
 				else if(x%length ==0){
 						output+=word.charAt(y);
-						
-						
 				}
 				else if(x%length == length-1) {
 						output+=reverse.charAt(y);
-					
 				}
-				
-				
 			}
 			if(bruh) {
 				output+= reverse.charAt(x);
-				
 				bruh=false;
 			}
-			
-			
 			output+="\n";
 		}
-		
-		
-		
-		
-		
 		return output;
-		
 	}
 }
