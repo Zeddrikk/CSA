@@ -1,7 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
-package pong3;
+package pong4;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
 
 public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 {
-	private Ball ball;
+	private SpeedUpBall ball;
 	private Paddle leftPaddle;
 	private Paddle rightPaddle;
 	private boolean[] keys;		//keeps track of what keys are pressed
@@ -29,7 +29,7 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 
 		//instantiate a Ball
 		
-		ball = new Ball();
+		ball = new SpeedUpBall(200,200,10,10,Color.BLACK,1,1);
 		
 		//instantiate a left Paddle
 		leftPaddle = new Paddle(10,10,20,60,5);
@@ -80,6 +80,10 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 				&&(ball.getY()-rightPaddle.getY())>=-10){
 			ball.setXSpeed(-ball.getXSpeed());
 		}
+		if(ball.getX()<0) {
+			
+		}
+		if(ball.getX()>800)
 		
 		
 		if(keys[0] == true)
